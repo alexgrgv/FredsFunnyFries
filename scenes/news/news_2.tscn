@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://mf1xcxa6natm"]
+[gd_scene format=3 uid="uid://babyhsarpkgut"]
 
-[ext_resource type="Script" uid="uid://i40yidf5kv8d" path="res://scenes/news/news_2.gd" id="1_2qxqk"]
+[ext_resource type="Script" path="res://scenes/news/news_2.gd" id="1_2qxqk"]
 [ext_resource type="AudioStream" uid="uid://2vyifbkxec1s" path="res://assets/Audio/news2.mp3" id="1_dl831"]
-[ext_resource type="Texture2D" uid="uid://b2r3y2jr17esy" path="res://assets/Cutscenes/Cutscene_news.PNG" id="1_h03h7"]
+[ext_resource type="Texture2D" uid="uid://btecr84trgopa" path="res://assets/Cutscenes/NEWS2.PNG" id="3_2qxqk"]
 
 [node name="News2" type="Node2D" unique_id=207683574]
 script = ExtResource("1_2qxqk")
@@ -14,6 +14,6 @@ autoplay = true
 [node name="TextureRect" type="TextureRect" parent="." unique_id=360192598]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_h03h7")
+texture = ExtResource("3_2qxqk")
 
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
