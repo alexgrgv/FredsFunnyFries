@@ -1,3 +1,72 @@
-[gd_scene format=3 uid="uid://c15dh6btiilj3"]
+[gd_scene format=3 uid="uid://b4870lyga7i8a"]
 
-[node name="Credits" type="Node2D" unique_id=1529055506]
+[ext_resource type="Script" uid="uid://c4nbjkvm6nir7" path="res://scenes/mainmenu/credits.gd" id="1_i2trd"]
+[ext_resource type="Texture2D" uid="uid://ckeeiyp13l4sf" path="res://assets/MenuScreen.JPG" id="1_j0eg3"]
+[ext_resource type="FontFile" uid="uid://d8ubn5rk6l4t" path="res://assets/PanasChill.ttf" id="1_o3rah"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2trd"]
+
+[node name="Credit" type="Control" unique_id=2067186984]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i2trd")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=941196414]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_j0eg3")
+
+[node name="Control" type="Control" parent="." unique_id=297163662]
+z_index = 4
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=568597644]
+z_index = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -960.0
+offset_right = 960.0
+offset_bottom = 1301.0
+grow_horizontal = 2
+
+[node name="TITLE" type="Label" parent="Control/VBoxContainer" unique_id=622542902]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_o3rah")
+theme_override_font_sizes/font_size = 100
+text = "CREDITS"
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer" unique_id=680551618]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_o3rah")
+theme_override_font_sizes/font_size = 29
+text = "Developed by the aformentioned big cheese (Alex, Edward, and Jesse) with Special Member Adam"
+
+[node name="quit" type="Button" parent="Control/VBoxContainer" unique_id=354201797]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83137256, 0.6392157, 0.078431375, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/h_separation = 4
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_fonts/font = ExtResource("1_o3rah")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i2trd")
+text = "Quit"
+script = ExtResource("1_i2trd")
+
+[connection signal="pressed" from="Control/VBoxContainer/quit" to="." method="_on_quit_pressed"]
