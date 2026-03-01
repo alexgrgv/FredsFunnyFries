@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c6qwkptl4f1yu"]
 
-[ext_resource type="Script" path="res://scenes/news/news_4.gd" id="1_hbcr3"]
+[ext_resource type="Script" uid="uid://ccimqk56vvmla" path="res://scenes/news/news_4.gd" id="1_hbcr3"]
 [ext_resource type="AudioStream" uid="uid://brgt106ckpm16" path="res://assets/Audio/news4.mp3" id="2_trr5i"]
 [ext_resource type="Texture2D" uid="uid://cifke5nsv7hsw" path="res://assets/Cutscenes/NEWS4A.PNG" id="3_trr5i"]
 [ext_resource type="Texture2D" uid="uid://rph3grugx02m" path="res://assets/Cutscenes/NEWS4B.PNG" id="4_1gs33"]
@@ -22,4 +22,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_1gs33")
 
+[node name="Timer" type="Timer" parent="." unique_id=282649099]
+wait_time = 13.6
+autostart = true
+
 [connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="ready" from="TextureRect2" to="." method="_on_texture_rect_2_ready"]
+[connection signal="visibility_changed" from="TextureRect2" to="." method="_on_texture_rect_2_visibility_changed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

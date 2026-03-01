@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4870lyga7i8a"]
 
-[ext_resource type="Script" uid="uid://c4nbjkvm6nir7" path="res://scenes/mainmenu/credits.gd" id="1_i2trd"]
+[ext_resource type="Script" path="res://scenes/mainmenu/credits.gd" id="1_i2trd"]
 [ext_resource type="Texture2D" uid="uid://ckeeiyp13l4sf" path="res://assets/MenuScreen.JPG" id="1_j0eg3"]
 [ext_resource type="FontFile" uid="uid://d8ubn5rk6l4t" path="res://assets/PanasChill.ttf" id="1_o3rah"]
 
@@ -55,9 +55,16 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_o3rah")
 theme_override_font_sizes/font_size = 29
 text = "Developed by the aformentioned big cheese (Alex, Edward, and Jesse) with Special Member Adam"
+horizontal_alignment = 1
 
-[node name="quit" type="Button" parent="Control/VBoxContainer" unique_id=354201797]
-layout_mode = 2
+[node name="quit" type="Button" parent="Control" unique_id=354201797]
+layout_mode = 0
+offset_left = -79.0
+offset_top = 165.0
+offset_right = 78.0
+offset_bottom = 244.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.83137256, 0.6392157, 0.078431375, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 16
@@ -66,7 +73,7 @@ theme_override_constants/align_to_largest_stylebox = 0
 theme_override_fonts/font = ExtResource("1_o3rah")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/pressed = SubResource("StyleBoxFlat_i2trd")
-text = "Quit"
+text = "Back"
 script = ExtResource("1_i2trd")
 
-[connection signal="pressed" from="Control/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]
