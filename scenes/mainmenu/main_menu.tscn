@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://be2co8nsu3nms"]
+
+[ext_resource type="Script" uid="uid://d2sn2lovdoxfj" path="res://scenes/mainmenu/main_menu.gd" id="1_jl081"]
+[ext_resource type="FontFile" uid="uid://d8ubn5rk6l4t" path="res://assets/PanasChill.ttf" id="1_ysd44"]
+[ext_resource type="Texture2D" uid="uid://c4ht4x5v3dqlu" path="res://assets/titlescreen.PNG" id="2_sq05c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq05c"]
+bg_color = Color(0.57698524, 0.3554227, 0.13171142, 0.56078434)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 10.0
+shadow_color = Color(0.93375456, 0.66555417, 0.27971473, 1)
+shadow_size = 3
+shadow_offset = Vector2(0, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jl081"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ukhca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukhca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn0lx"]
+
+[node name="MainMenu" type="Control" unique_id=2123988539]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_jl081")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1508995746]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sq05c")
+
+[node name="button" type="Control" parent="." unique_id=1445079300]
+anchors_preset = 0
+offset_left = -300.375
+offset_top = 450.0
+offset_right = 299.625
+offset_bottom = 450.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="button" unique_id=29084037]
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = -325.0
+offset_right = 300.75
+offset_bottom = -24.0
+grow_horizontal = 2
+theme_override_constants/separation = 32
+script = ExtResource("1_jl081")
+
+[node name="start" type="Button" parent="button/VBoxContainer" unique_id=1867864635]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83137256, 0.6392157, 0.078431375, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/h_separation = 4
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_fonts/font = ExtResource("1_ysd44")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_sq05c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jl081")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ukhca")
+text = "Start"
+script = ExtResource("1_jl081")
+
+[node name="credits" type="Button" parent="button/VBoxContainer" unique_id=535270801]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83137256, 0.6392157, 0.078431375, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/h_separation = 4
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_fonts/font = ExtResource("1_ysd44")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ukhca")
+text = "Credits
+"
+script = ExtResource("1_jl081")
+
+[node name="quit" type="Button" parent="button/VBoxContainer" unique_id=650106914]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.83137256, 0.6392157, 0.078431375, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/h_separation = 4
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_fonts/font = ExtResource("1_ysd44")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yn0lx")
+text = "Quit"
+script = ExtResource("1_jl081")
+
+[connection signal="pressed" from="button/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="button/VBoxContainer/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="button/VBoxContainer/quit" to="." method="_on_quit_pressed"]

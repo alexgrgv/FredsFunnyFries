@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dwxgjin6qtly4"]
+
+[ext_resource type="Script" uid="uid://b38jokhsxlxoy" path="res://scenes/news/news_1.gd" id="1_qo78n"]
+[ext_resource type="AudioStream" uid="uid://ccvq3gqsyssj6" path="res://assets/Audio/news1.mp3" id="1_swdbk"]
+[ext_resource type="Texture2D" uid="uid://b2r3y2jr17esy" path="res://assets/Cutscenes/Cutscene_news.PNG" id="3_qo78n"]
+
+[node name="news1" type="Node2D" unique_id=404024776]
+script = ExtResource("1_qo78n")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=467434870]
+stream = ExtResource("1_swdbk")
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1766401255]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_qo78n")
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
