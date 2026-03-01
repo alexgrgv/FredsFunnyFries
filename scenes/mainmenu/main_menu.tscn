@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ibnept0nfoos"]
+[gd_scene format=3 uid="uid://be2co8nsu3nms"]
 
 [ext_resource type="Script" uid="uid://d2sn2lovdoxfj" path="res://scenes/mainmenu/main_menu.gd" id="1_jl081"]
 [ext_resource type="FontFile" uid="uid://d8ubn5rk6l4t" path="res://assets/PanasChill.ttf" id="1_ysd44"]

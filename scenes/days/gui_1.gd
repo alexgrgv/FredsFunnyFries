@@ -20,6 +20,8 @@ var currentCharacter: int = 0 # index for array to check character orders, 0 to 
 
 var orderList1 = [121, 312, 111, 322]
 
+var dateEnd: bool = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,10 +29,10 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass 
-	# $MissingButton.visible = not visible
+func _process(delta): 
+	$MissingButton.visible = not visible
 	# $NoiseButton.visible = not visible
+	
 
 # add Noise
 func _on_texture_button_10_pressed() -> void:

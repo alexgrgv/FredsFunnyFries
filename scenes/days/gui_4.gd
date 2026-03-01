@@ -20,10 +20,13 @@ var currentCharacter: int = 0 # index for array to check character orders, 0 to 
 
 var orderList4 = [223, 323, 0, 0]
 
+var dateEnd: bool = false
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("it is tuesday")
+	print("it is friday")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

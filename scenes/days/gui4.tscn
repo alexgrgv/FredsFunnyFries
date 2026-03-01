@@ -37,7 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://ds2meewopahl6" path="res://assets/Food items/Basket_missingTopping.PNG" id="31_8wr7x"]
 [ext_resource type="Texture2D" uid="uid://50q3md4hqnd2" path="res://assets/Characters/Speechbubble.PNG" id="34_vyyxi"]
 [ext_resource type="Texture2D" uid="uid://bxe2ixcsw1aay" path="res://assets/Food items/Food bubble/octo_gravey_missing.PNG" id="40_c5x21"]
-[ext_resource type="Texture2D" uid="uid://dgf56v3vpr12g" path="res://assets/Food items/Food bubble/death.PNG" id="43_lyihn"]
+[ext_resource type="Texture2D" uid="uid://twae1coidc03" path="res://assets/Food items/Food bubble/death.PNG" id="43_lyihn"]
 
 [node name="GUI" type="CanvasLayer" unique_id=1624273168]
 script = ExtResource("1_q8sw0")
